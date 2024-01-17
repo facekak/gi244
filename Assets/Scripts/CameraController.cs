@@ -10,6 +10,9 @@ public class CameraController : MonoBehaviour
     [Header("Move")] 
     [SerializeField] private float moveSpeed;
 
+    [SerializeField] private Transform conner1;
+    [SerializeField] private Transform conner2;
+
     [SerializeField] private float xinput;
     [SerializeField] private float zinput;
 
@@ -41,5 +44,14 @@ public class CameraController : MonoBehaviour
 
         
         transform.position += dir * moveSpeed * Time.deltaTime;
+        transform.position = Clamp(conner1.position, conner2.position);
+    }
+
+    private Vector3 Clamp(Vector3 lowerleft,Vector3 topRight)
+    {
+        Vector3 pos = new Vector3(Mathf.Clamp(transform.position.x, lowerleft.x, topRight.y), transform.position.y,
+            Mathf.Clamp(transform.position.z, lowerleft.z, topRight.z));
+
+        return pos;
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class InfoManager : MonoBehaviour
 {
     public static InfoManager instance;
-    void Start()
+    void Awake()
     {
         instance = this;
     }

@@ -6,7 +6,7 @@ using UnityEngine;
 public class ActionManager : MonoBehaviour
 {
     public static ActionManager instance;
-    void Start()
+    void Awake()
     {
         instance = this;
     }

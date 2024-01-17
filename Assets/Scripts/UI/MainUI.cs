@@ -5,7 +5,7 @@ using UnityEngine;
 public class MainUI : MonoBehaviour
 {
     public static MainUI instance;
-    void Start()
+    void Awake()
     {
         instance = this;
     }

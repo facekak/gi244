@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 
 public enum UnitState
 {
@@ -51,7 +52,7 @@ public class Unit : MonoBehaviour
     private NavMeshAgent navAgent;
     public NavMeshAgent NavAgent { get { return navAgent; } }
 
-    [SerializeField] private Factions faction;
+    [FormerlySerializedAs("faction")] [SerializeField] private Faction faction;
 
     [SerializeField] private GameObject selectionVisual;
     public GameObject SelectionVisual { get { return selectionVisual; } }
@@ -70,5 +71,11 @@ public class Unit : MonoBehaviour
     void Update()
     {
         
+    }
+    
+    public void ToggleSelectionVisual(bool flag)
+    {
+        if (selectionVisual != null)
+            selectionVisual.SetActive(flag);
     }
 }

@@ -27,6 +27,10 @@ public class Faction : MonoBehaviour
     public int Gold { get { return gold; } set { gold = value; } }
     [SerializeField] private int stone;
     public int Stone { get { return stone; } set { stone = value; } }
+    
+    [SerializeField] private List<Unit> aliveUnits = new List<Unit>();
+    public List<Unit> AliveUnits { get { return aliveUnits; } }
+    
     void Start()
     {
         
@@ -36,5 +40,35 @@ public class Faction : MonoBehaviour
     void Update()
     {
         
+    }
+    
+    public bool CheckUnitCost(Unit unit)
+    {
+        if (food < unit.UnitCost.food)
+            return false;
+
+        if (wood < unit.UnitCost.wood)
+            return false;
+
+        if (gold < unit.UnitCost.gold)
+            return false;
+
+        if (stone < unit.UnitCost.stone)
+            return false;
+
+        return true;
+    }
+    
+    public void DeductUnitCost(Unit unit)
+    {
+        food -= unit.UnitCost.food;
+        wood -= unit.UnitCost.wood;
+        gold -= unit.UnitCost.gold;
+        stone -= unit.UnitCost.stone;
+    }
+    
+    public bool IsMyUnit(Unit u)
+    {
+        return aliveUnits.Contains(u);
     }
 }

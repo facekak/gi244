@@ -12,7 +12,7 @@ public enum UnitState
     Die
 }
 
-[SerializeField]
+[System.Serializable]
 public struct UnitCost
 {
     public int food;

@@ -5273,7 +5273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   unitName: 
-  unitPic: {fileID: 0}
+  unitPic: {fileID: 21300000, guid: 9e286d4aa64512e48adb8a0b970cc7e0, type: 3}
   curHP: 0
   maxHP: 100
   moveSpeed: 5

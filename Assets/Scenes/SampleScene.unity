@@ -4427,6 +4427,14 @@ PrefabInstance:
       propertyPath: faction
       value: 
       objectReference: {fileID: 974262652}
+    - target: {fileID: 630020669276870338, guid: 1d0d75ab802512a40a7d6628b0388efe, type: 3}
+      propertyPath: unitPrefabs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 630020669276870338, guid: 1d0d75ab802512a40a7d6628b0388efe, type: 3}
+      propertyPath: unitPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 186328, guid: ee7be0280b46d4345abe57e4006e6051, type: 3}
     - target: {fileID: 6732706730926897947, guid: 1d0d75ab802512a40a7d6628b0388efe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.19

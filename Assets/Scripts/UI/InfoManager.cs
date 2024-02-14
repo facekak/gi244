@@ -56,6 +56,9 @@ public class InfoManager : MonoBehaviour
         unitPic.color = Color.clear;
         nameTxt.text = "";
 
+        rsrcIcon.color = Color.clear;
+        rsrcTxt.text = "";
+
         hpIcon.color = Color.clear;
         hpTxt.text = "";
 

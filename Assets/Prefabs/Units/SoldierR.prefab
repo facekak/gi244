@@ -5273,15 +5273,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   unitName: 
-  unitPic: {fileID: 21300000, guid: 9e286d4aa64512e48adb8a0b970cc7e0, type: 3}
-  curHP: 0
+  unitPic: {fileID: 21300000, guid: 240403fd443eb0d4c9c5939b9c00f42f, type: 3}
+  curHP: 100
   maxHP: 100
   moveSpeed: 5
   minWpnDamage: 0
-  maxWpnDamage: 0
-  armour: 0
-  visualRange: 0
-  weaponRange: 0
+  maxWpnDamage: 12
+  armour: 1
+  visualRange: 20
+  weaponRange: 15
   state: 0
   faction: {fileID: 0}
   selectionVisual: {fileID: 5387292227544966636}

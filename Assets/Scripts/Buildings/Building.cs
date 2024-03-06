@@ -23,9 +23,16 @@ public class Building : Structure
     [SerializeField] private bool isFunctional; 
     public bool IsFunctional { get { return isFunctional;} set { isFunctional = value; } }
 
+    [SerializeField] private bool isHQ;
+    public bool IsHQ { get { return isHQ; } }
+    
+    // How deep into the ground the building is at the construction site
+    [SerializeField] private float intoTheGround = 7f;
+    public float IntoTheGround { get { return intoTheGround; } }
+
     void Start()
     {
-        curHP = maxHP;
+        
     }
 
     // Update is called once per frame

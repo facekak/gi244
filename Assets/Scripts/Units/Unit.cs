@@ -62,7 +62,8 @@ public class Unit : MonoBehaviour
     private NavMeshAgent navAgent;
     public NavMeshAgent NavAgent { get { return navAgent; } }
 
-    [FormerlySerializedAs("faction")] [SerializeField] private Faction faction;
+    [SerializeField] private Faction faction;
+    public Faction Faction { get { return faction; } set { faction = value; } }
 
     [SerializeField] private GameObject selectionVisual;
     public GameObject SelectionVisual { get { return selectionVisual; } }
@@ -74,6 +75,14 @@ public class Unit : MonoBehaviour
     [SerializeField] private float unitWaitTime = 0.1f;
     public float UnitWaitTime { get { return unitWaitTime; } }
     
+    [SerializeField] private bool isBuilder;
+    public bool IsBuilder { get { return isBuilder; } set { isBuilder = value; } }
+
+    [SerializeField] private Builder builder;
+    public Builder Builder { get { return builder; } }
+    
+    
+
     void Awake()
     {
         navAgent = GetComponent<NavMeshAgent>();

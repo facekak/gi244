@@ -52,7 +52,7 @@ public class Builder : MonoBehaviour
 
         switch (unit.State)
         {
-            case  UnitState.MoveToBuild:
+            case UnitState.MoveToBuild:
                 MoveToBuild(inProgressBuilding);
                 break;
             case UnitState.BuildProgress:
@@ -231,5 +231,26 @@ public class Builder : MonoBehaviour
                 unit.SetState(UnitState.Idle);
             }
         }
+    }
+    
+    private void OnTriggerStay(Collider other)
+    {
+        if (unit.State == UnitState.Die)
+            return;
+
+        if (unit != null)
+        {
+            if (other.gameObject == inProgressBuilding)
+            {
+                unit.NavAgent.isStopped = true;
+                unit.SetState(UnitState.BuildProgress);
+            }
+        }
+    }
+    
+    private void OnDestroy()
+    {
+        if (ghostBuilding != null)
+            Destroy(ghostBuilding);
     }
 }

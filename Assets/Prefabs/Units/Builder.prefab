@@ -1534,7 +1534,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &471284
 Transform:
   m_ObjectHideFlags: 0
@@ -2300,7 +2300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &457922
 Transform:
   m_ObjectHideFlags: 0
@@ -2336,7 +2336,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ce19f20337e1d6545bddd9bc3ba7de65, type: 2}
+  - {fileID: 2100000, guid: f81a978cf85038f41a62cf0aad8c2981, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3079,7 +3079,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &481078
 Transform:
   m_ObjectHideFlags: 0
@@ -4132,7 +4132,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &406854
 Transform:
   m_ObjectHideFlags: 0
@@ -4698,7 +4698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &422470
 Transform:
   m_ObjectHideFlags: 0
@@ -5142,8 +5142,9 @@ GameObject:
   - component: {fileID: 4491464332862994989}
   - component: {fileID: -7605617708242830567}
   - component: {fileID: 7030646632985715005}
+  - component: {fileID: 7242206753051657126}
   m_Layer: 6
-  m_Name: SoldierR
+  m_Name: Builder
   m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5271,9 +5272,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8efaf46bcbcdf514fb13c58cb5c49294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  unitName: 
-  unitPic: {fileID: 21300000, guid: 240403fd443eb0d4c9c5939b9c00f42f, type: 3}
+  id: 1
+  unitName: Builder
+  unitPic: {fileID: 21300000, guid: 5541b6f769b62d34083116ae3d591b81, type: 3}
   curHP: 100
   maxHP: 100
   moveSpeed: 5
@@ -5291,8 +5292,29 @@ MonoBehaviour:
     gold: 20
     stone: 0
   unitWaitTime: 0.1
-  isBuilder: 0
+  isBuilder: 1
   builder: {fileID: 0}
+--- !u!114 &7242206753051657126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 351882a89a9639447ab97d015c7aa37c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toBuild: 0
+  showGhost: 0
+  buildingList:
+  - {fileID: 223863715128093613, guid: 1d0d75ab802512a40a7d6628b0388efe, type: 3}
+  ghostBuildingList:
+  - {fileID: 223863715128093613, guid: 877a3470e32bfce4f8d0eada09a64aa2, type: 3}
+  newBuilding: {fileID: 0}
+  ghostBuilding: {fileID: 0}
+  inProgressBuilding: {fileID: 0}
 --- !u!1 &186630
 GameObject:
   m_ObjectHideFlags: 0
@@ -6268,6 +6290,10 @@ PrefabInstance:
     - target: {fileID: 126378, guid: 9720b616daa9ee547ba1b8117fc05f69, type: 3}
       propertyPath: m_Name
       value: Musket
+      objectReference: {fileID: 0}
+    - target: {fileID: 126378, guid: 9720b616daa9ee547ba1b8117fc05f69, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 460526, guid: 9720b616daa9ee547ba1b8117fc05f69, type: 3}
       propertyPath: m_LocalScale.x

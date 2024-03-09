@@ -91,7 +91,7 @@ public class CameraController : MonoBehaviour
 
         if (dist < minZoomDist && zoomModifier > 0f)
             return; // too close
-        else if (dist > minZoomDist && zoomModifier < 0f)
+        else if (dist > maxZoomDist && zoomModifier < 0f)
             return; // too far
         
         cam.transform.position += cam.transform.forward * zoomModifier * zoomSpeed;

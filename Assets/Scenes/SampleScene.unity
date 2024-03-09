@@ -6765,6 +6765,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 630020669276870338, guid: 1d0d75ab802512a40a7d6628b0388efe, type: 3}
+      propertyPath: intoTheGround
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 630020669276870338, guid: 1d0d75ab802512a40a7d6628b0388efe, type: 3}
       propertyPath: unitPrefabs.Array.size
       value: 2
       objectReference: {fileID: 0}

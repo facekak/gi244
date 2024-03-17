@@ -21,6 +21,9 @@ public class UnitSelect : MonoBehaviour
 
     public static UnitSelect instance;
     
+    [SerializeField]
+    private ResourceSource curResource; //current selected resource
+    
     void Awake()
     {
         faction = GetComponent<Faction>();
@@ -84,6 +87,9 @@ public class UnitSelect : MonoBehaviour
                 case "Building":
                     BuildingSelect(hit);
                     break;
+                case "Resource":
+                    ResourceSelect(hit);
+                    break;
             }
         }
     }
@@ -94,6 +100,9 @@ public class UnitSelect : MonoBehaviour
             curUnit.ToggleSelectionVisual(false);
         if (curBuilding != null)
             curBuilding.ToggleSelectionVisual(false);
+        if (curResource != null)
+            curResource.ToggleSelectionVisual(false);
+        
     }
     
     private void ClearEverything()
@@ -132,4 +141,21 @@ public class UnitSelect : MonoBehaviour
             ShowBuilding(curBuilding);//Show building info
         }
     }
+    
+    private void ShowResource()
+    {
+        InfoManager.instance.ShowAllInfo(curResource);//Show resource info in Info Panel
+
+    }
+    
+    private void ResourceSelect(RaycastHit hit)
+    {
+        curResource = hit.collider.GetComponent<ResourceSource>();
+        if (curResource == null)
+            return;
+
+        curResource.ToggleSelectionVisual(true);
+        ShowResource();//Show resource info
+    }
+
 }

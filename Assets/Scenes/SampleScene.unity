@@ -7163,7 +7163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 630020669276870338, guid: 1d0d75ab802512a40a7d6628b0388efe, type: 3}
       propertyPath: unitPrefabs.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 630020669276870338, guid: 1d0d75ab802512a40a7d6628b0388efe, type: 3}
       propertyPath: unitPrefabs.Array.data[1]
@@ -7172,7 +7172,7 @@ PrefabInstance:
     - target: {fileID: 630020669276870338, guid: 1d0d75ab802512a40a7d6628b0388efe, type: 3}
       propertyPath: unitPrefabs.Array.data[2]
       value: 
-      objectReference: {fileID: 186328, guid: e24216d827d504144b27f9b7ec88d9e2, type: 3}
+      objectReference: {fileID: 186328, guid: 7bf38d31a0137ea4abecb239804727d2, type: 3}
     - target: {fileID: 6732706730926897947, guid: 1d0d75ab802512a40a7d6628b0388efe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.73
@@ -7745,6 +7745,7 @@ MonoBehaviour:
     m_Bits: 0
   curUnit: {fileID: 0}
   curBuilding: {fileID: 0}
+  curResource: {fileID: 0}
 --- !u!114 &1830539083
 MonoBehaviour:
   m_ObjectHideFlags: 0

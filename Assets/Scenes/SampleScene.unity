@@ -6891,6 +6891,10 @@ PrefabInstance:
       value: Headquarter
       objectReference: {fileID: 0}
     - target: {fileID: 630020669276870338, guid: 1d0d75ab802512a40a7d6628b0388efe, type: 3}
+      propertyPath: isHQ
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 630020669276870338, guid: 1d0d75ab802512a40a7d6628b0388efe, type: 3}
       propertyPath: curHP
       value: 100
       objectReference: {fileID: 0}

@@ -47,16 +47,26 @@ public class UnitSelect : MonoBehaviour
         //mouse down
         if (Input.GetMouseButtonDown(0))
         {
+            startPos = Input.mousePosition;
+            
             //if click UI,don't clear
             if (EventSystem.current.IsPointerOverGameObject())
                 return;
             
             ClearEverything();
         }
+        
+        // mouse up
+        if (Input.GetMouseButton(0))
+        {
+            //Debug.Log("Mouse held down")
+            UpdateSelectionBox(Input.mousePosition);
+        }
 
         // mouse up
         if (Input.GetMouseButtonUp(0))
         {
+            ReleaseSelectionBox(Input.mousePosition);
             TrySelect(Input.mousePosition);
         }
     }

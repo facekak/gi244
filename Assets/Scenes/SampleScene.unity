@@ -6407,6 +6407,67 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1001 &1454623882
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1721604337}
+    m_Modifications:
+    - target: {fileID: 1564120715609956024, guid: 47d31533cd3400746a7f484ca62c5030, type: 3}
+      propertyPath: nation
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923024723660023416, guid: 47d31533cd3400746a7f484ca62c5030, type: 3}
+      propertyPath: m_Name
+      value: France
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993865088141651847, guid: 47d31533cd3400746a7f484ca62c5030, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993865088141651847, guid: 47d31533cd3400746a7f484ca62c5030, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993865088141651847, guid: 47d31533cd3400746a7f484ca62c5030, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993865088141651847, guid: 47d31533cd3400746a7f484ca62c5030, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993865088141651847, guid: 47d31533cd3400746a7f484ca62c5030, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993865088141651847, guid: 47d31533cd3400746a7f484ca62c5030, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993865088141651847, guid: 47d31533cd3400746a7f484ca62c5030, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993865088141651847, guid: 47d31533cd3400746a7f484ca62c5030, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993865088141651847, guid: 47d31533cd3400746a7f484ca62c5030, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993865088141651847, guid: 47d31533cd3400746a7f484ca62c5030, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 47d31533cd3400746a7f484ca62c5030, type: 3}
 --- !u!1 &1478799544
 GameObject:
   m_ObjectHideFlags: 0
@@ -7562,6 +7623,7 @@ Transform:
   m_Children:
   - {fileID: 974262651}
   - {fileID: 2088578649}
+  - {fileID: 2107424843}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1735486667
@@ -7824,6 +7886,7 @@ MonoBehaviour:
   curBuilding: {fileID: 0}
   curResource: {fileID: 0}
   selectionBox: {fileID: 0}
+  curEnemy: {fileID: 0}
 --- !u!114 &1830539083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8995,6 +9058,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379d7a2e4f3e1ba49a5053c3ae51a7ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2107424843 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5993865088141651847, guid: 47d31533cd3400746a7f484ca62c5030, type: 3}
+  m_PrefabInstance: {fileID: 1454623882}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2117467009
 GameObject:
   m_ObjectHideFlags: 0

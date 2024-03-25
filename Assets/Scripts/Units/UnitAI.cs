@@ -28,7 +28,6 @@ public class UnitAI : MonoBehaviour
         
     }
     
-    
     // checks for nearby enemies with a sphere cast
     protected Unit CheckForNearbyEnemies()
     {
@@ -57,6 +56,7 @@ public class UnitAI : MonoBehaviour
             // is this a team mate?
             else if (unit.Faction.IsMyUnit(target))
                 continue;
+            
 
             // if it is not the closest enemy or the distance is less than the closest distance it currently has
             else if (!closest || (Vector3.Distance(transform.position, hits[x].transform.position) < closestDist))
@@ -74,8 +74,7 @@ public class UnitAI : MonoBehaviour
         else
             return null;
     }
-
-
+    
     protected void Check()
     {
         if (!unit.IsWorker && !unit.IsBuilder)// if a unit is a fighter
@@ -89,8 +88,60 @@ public class UnitAI : MonoBehaviour
                 {
                     unit.ToAttackUnit(enemy);
                 }
+                else //if there is no enemy unit left
+                {
+                    //check if we have nearby enemy building
+                    Building potentialEnemyBuilding = CheckForNearbyEnemyBuildings();
+
+                    if (potentialEnemyBuilding != null)
+                    {
+                        unit.ToAttackBuilding(potentialEnemyBuilding);
+                    }
+                }
             }
         }
+    }
+    
+    // checks for nearby enemy buildings with a sphere cast
+    protected Building CheckForNearbyEnemyBuildings()
+    {
+        RaycastHit[] hits = Physics.SphereCastAll(transform.position, unit.DefendRange, Vector3.up, buildingLayerMask);
+
+        GameObject closest = null;
+        float closestDist = 0.0f;
+
+        for (int x = 0; x < hits.Length; x++)
+        {
+            //Debug.Log("Test - " + hits[x].collider.gameObject.ToString());
+            Building target = hits[x].collider.GetComponent<Building>();
+
+            // skip if this is not a building or destroyed
+            if ((target == null) || (target.CurHP <= 0))
+                continue;
+
+            // skip if it is a natural/neutral Building
+            if (target.Faction == null)
+                continue;
+
+            // is this my building?
+            else if (unit.Faction.IsMyBuilding(target))
+                continue;
+
+            // if it is not the closest enemy building or the distance is less than the closest distance it currently has
+            else if (!closest || (Vector3.Distance(transform.position, hits[x].transform.position) < closestDist))
+            {
+                closest = hits[x].collider.gameObject;
+                closestDist = Vector3.Distance(transform.position, hits[x].transform.position);
+            }
+        }
+
+        if (closest != null)
+        {
+            //Debug.Log(closest.gameObject.ToString() + ", " + closestDist.ToString());
+            return closest.GetComponent<Building>();
+        }
+        else
+            return null;
     }
 
 

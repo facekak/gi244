@@ -111,6 +111,9 @@ public class Unit : MonoBehaviour
     [SerializeField]
     private float lastAttackTime;
     
+    [SerializeField] private float defendRange = 30f; //the range that a unit will defensively auto-attack
+    public float DefendRange { get { return defendRange; } }
+    
 
     void Awake()
     {

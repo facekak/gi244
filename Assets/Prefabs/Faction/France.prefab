@@ -70,6 +70,11 @@ MonoBehaviour:
   - {fileID: 223863715128093613, guid: 2328407933765b14799e743412ec4b9f, type: 3}
   - {fileID: 2154905520469637500, guid: ab8017f22ec69e74e837aeee9350d448, type: 3}
   - {fileID: 223863715128093613, guid: 38b888df3042f3648a47c758c97d9197, type: 3}
+  ghostBuildingPrefabs:
+  - {fileID: 223863715128093613, guid: a118a2be63573834ea004cc7d7c28387, type: 3}
+  - {fileID: 223863715128093613, guid: 0fa137ec8222a36458265269c07c85ce, type: 3}
+  - {fileID: 2154905520469637500, guid: 6516895df95c4024fa1cd6a62e4a2d41, type: 3}
+  - {fileID: 223863715128093613, guid: eb0cc91628423304e96bcf2405b62cb0, type: 3}
   unitPrefabs:
   - {fileID: 186328, guid: e24216d827d504144b27f9b7ec88d9e2, type: 3}
   - {fileID: 6131787940998164347, guid: 1517a0918c11dc1409d62eb429bc8f78, type: 3}
@@ -123,6 +128,9 @@ MonoBehaviour:
   fighters: []
   builders: []
   workers: []
+  hq: []
+  house: []
+  barracks: []
   faction: {fileID: 0}
 --- !u!114 &7807971486861194122
 MonoBehaviour:

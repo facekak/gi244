@@ -11268,6 +11268,36 @@ MonoBehaviour:
   weightMultiplier: 1
   timePassed: 0
   rangeFromStartPos: 30
+--- !u!114 &5993865087728786385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132280857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1bea6fa8b9e484b9317b8b994c18de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weightMultiplier: 1
+  timePassed: 0
+  rangeFromStartPos: 30
+--- !u!114 &5993865087728786386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132280857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 725cac7ed5ba5824d83cea9220b2c516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weightMultiplier: 1
+  timePassed: 0
+  rangeFromStartPos: 30
 --- !u!1001 &6637047283254066000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11411,6 +11441,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4070502550056601680, guid: 2e2fcb3f331597346bbd0f5d37d06271, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5993865087728786384}
+    - targetCorrespondingSourceObject: {fileID: 4070502550056601680, guid: 2e2fcb3f331597346bbd0f5d37d06271, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5993865087728786385}
+    - targetCorrespondingSourceObject: {fileID: 4070502550056601680, guid: 2e2fcb3f331597346bbd0f5d37d06271, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5993865087728786386}
   m_SourcePrefab: {fileID: 100100000, guid: 2e2fcb3f331597346bbd0f5d37d06271, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

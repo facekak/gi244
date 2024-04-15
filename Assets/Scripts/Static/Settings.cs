@@ -14,12 +14,12 @@ public static class Settings
         switch (side)
         {
             case 0:
-                mySide = Nation.britain;
+                mySide = Nation.Britain;
                 EnemySide = Nation.France;
                 break;
             case 1:
                 mySide = Nation.France;
-                EnemySide = Nation.britain;
+                EnemySide = Nation.Britain;
                 break;
         }
     }

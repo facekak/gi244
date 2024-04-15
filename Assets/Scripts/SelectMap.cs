@@ -12,7 +12,7 @@ public class SelectMap : MonoBehaviour
         mapScene = mapName;
     }
 
-    public void Startgame()
+    public void StartGame()
     {
         if (mapScene == "")
             return;
@@ -22,10 +22,4 @@ public class SelectMap : MonoBehaviour
 
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-    
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 public enum Nation
 {
     Neutral = 0,
-    britain,
+    Britain,
     Pirates,
     France,
     Spain,

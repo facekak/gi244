@@ -4074,7 +4074,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1564120715609956024, guid: 72b145f2c84eeb34b8dd672198221de1, type: 3}
       propertyPath: nation
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1564120715609956024, guid: 72b145f2c84eeb34b8dd672198221de1, type: 3}
       propertyPath: aliveUnits.Array.size
@@ -8758,6 +8758,10 @@ PrefabInstance:
     - target: {fileID: 2530592428869010643, guid: 2e2fcb3f331597346bbd0f5d37d06271, type: 3}
       propertyPath: stone
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 2530592428869010643, guid: 2e2fcb3f331597346bbd0f5d37d06271, type: 3}
+      propertyPath: nation
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2530592428869010643, guid: 2e2fcb3f331597346bbd0f5d37d06271, type: 3}
       propertyPath: aliveUnits.Array.size

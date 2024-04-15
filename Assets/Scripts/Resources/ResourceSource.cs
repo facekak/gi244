@@ -40,6 +40,10 @@ public class ResourceSource : MonoBehaviour
     void Start()
     {
         onRsrcQuantityChange.Invoke();
+        
+        //ใช้ในกรณีที่ไม่สามารถลาก ResourceUI ใน Prefab ได้ เช่น มันถูกสร้างขึ้นมาในฉากหลังจากเกมเริ่มเล่นไปแล้ว
+        //onInfoQuantityChange.AddListener(delegate { InfoManager.instance.ShowAllInfo(this); });
+        //onInfoQuantityChange.AddListener(() => InfoManager.instance.ShowAllInfo(this));
     }
 
     void Update()
